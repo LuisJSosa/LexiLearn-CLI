@@ -1,9 +1,17 @@
-package test
+package main
 
 import (
+	"bufio"
 	"fmt"
 	"os"
 )
+
+type Word struct {
+	Term       string
+	Definition string
+}
+
+var vocabList []Word
 
 func main() {
 	fmt.Println("======================================")
@@ -40,5 +48,30 @@ func main() {
 	default:
 		fmt.Println("Invalid choice. Please enter a number between 1 and 4.")
 		os.Exit(1)
+	}
+}
+
+func addWord() {
+	reader := bufio.NewReader(os.Stdin)
+	fmt.Print("Enter the term: ")
+	term, _ := reader.ReadString('\n')
+	fmt.Print("Enter the definition: ")
+	definition, _ := reader.ReadString('\n')
+
+	newWord := Word{Term: term, Definition: definition}
+	vocabList = append(vocabList, newWord)
+
+	fmt.Printf("Added: %s - %s\n", term, definition)
+}
+
+func listWords() {
+	if len(vocabList) == 0 {
+		fmt.Println("No vocabulary words found.")
+		return
+	}
+
+	fmt.Println("Vocabulary List:")
+	for _, word := range vocabList {
+		fmt.Printf("%s: %s\n", word.Term, word.Definition)
 	}
 }

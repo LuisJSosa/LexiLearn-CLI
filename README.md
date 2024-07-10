@@ -1,1 +1,0 @@
-# GoVocab-CLI

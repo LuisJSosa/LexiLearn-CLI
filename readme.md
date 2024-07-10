@@ -15,6 +15,16 @@ This is a CLI application for managing vocabulary words. The application allows 
 
 ## Usage
 
+To run the application:
+```sh
+go run main.go 
+```
 To add a word:
 ```sh
 go run cmd/main.go add "term" "definition"
+```
+#### go.mod:
+```go
+module GoVocab-CLI
+
+go 1.20
