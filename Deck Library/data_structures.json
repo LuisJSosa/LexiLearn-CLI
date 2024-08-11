@@ -1,0 +1,205 @@
+[
+  {
+    "Term": "Array",
+    "Definition": "A collection of elements identified by index or key. Arrays are used to store multiple items of the same type in a single variable. \n\n**Applications:** Implementations of other data structures like lists, heaps, hash tables, and matrices. Useful for iterating over a set of items and for random access. \n\n**Benefits:** Fast access to elements using index, efficient for iteration. \n\n**Disadvantages:** Fixed size, costly to insert and delete elements as they require shifting. \n\n**Pseudocode:**\n```\narray = [1, 2, 3, 4]\nfor i from 0 to length(array) - 1:\n    print(array[i])\n```\n**Common Operations:**\n- Access: `array[i]`\n- Update: `array[i] = value`\n- Insert: Shift elements and insert.\n- Delete: Shift elements and remove.",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-01T00:00:00Z",
+    "NextReview": "2024-08-02T00:00:00Z"
+  },
+  {
+    "Term": "Dynamic Array",
+    "Definition": "An array that can automatically resize itself when elements are added or removed, similar to a list in Python or ArrayList in Java. \n\n**Applications:** When array size is unknown or can change frequently. \n\n**Benefits:** Combines array's fast access with flexibility of resizing. \n\n**Disadvantages:** Amortized cost of resizing can be high. \n\n**Pseudocode:**\n```\ndynamic_array = []\ndynamic_array.append(1)\nprint(dynamic_array[0])\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-01T00:00:00Z",
+    "NextReview": "2024-08-02T00:00:00Z"
+  },
+  {
+    "Term": "Linked List",
+    "Definition": "A linear data structure where elements are stored in nodes, and each node contains a reference to the next node in the sequence. \n\n**Applications:** Used in implementations of stacks, queues, and graphs. \n\n**Benefits:** Dynamic size, easy insertion and deletion. \n\n**Disadvantages:** No random access to elements, requires additional memory for storing pointers. \n\n**Pseudocode:**\n```\nNode:\n    data\n    next\n\nhead = Node()\nhead.data = 1\nhead.next = Node()\nhead.next.data = 2\nhead.next.next = None\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-01T00:00:00Z",
+    "NextReview": "2024-08-02T00:00:00Z"
+  },
+  {
+    "Term": "Doubly Linked List",
+    "Definition": "A linked list where each node contains references to both the next and the previous node. \n\n**Applications:** Implementing navigation systems, browsers' forward and back button functionality, and LRU caches. \n\n**Benefits:** Bidirectional traversal, more flexibility than singly linked lists. \n\n**Disadvantages:** More memory overhead due to additional pointers. \n\n**Pseudocode:**\n```\nNode:\n    data\n    next\n    prev\n\nhead = Node()\nhead.data = 1\nhead.next = Node()\nhead.next.prev = head\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-01T00:00:00Z",
+    "NextReview": "2024-08-02T00:00:00Z"
+  },
+  {
+    "Term": "Circular Linked List",
+    "Definition": "A linked list where the last node points back to the first node, forming a circle. \n\n**Applications:** Used in applications requiring a circular iteration, like round-robin scheduling. \n\n**Benefits:** Easy circular traversal, useful for certain algorithms. \n\n**Disadvantages:** Complexity in implementation, potential for infinite loops. \n\n**Pseudocode:**\n```\nNode:\n    data\n    next\n\nhead = Node()\nhead.data = 1\nhead.next = Node()\nhead.next.data = 2\nhead.next.next = head\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-01T00:00:00Z",
+    "NextReview": "2024-08-02T00:00:00Z"
+  },
+  {
+    "Term": "Stack",
+    "Definition": "A linear data structure that follows the Last In, First Out (LIFO) principle. Elements are added and removed from the top. \n\n**Applications:** Used in expression parsing, backtracking algorithms, and function call management. \n\n**Benefits:** Simple and efficient for managing function calls, undo mechanisms in applications. \n\n**Disadvantages:** Limited to LIFO operations. \n\n**Pseudocode:**\n```\nstack = []\nstack.push(1)\nstack.push(2)\nprint(stack.pop())  # Outputs 2\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-01T00:00:00Z",
+    "NextReview": "2024-08-02T00:00:00Z"
+  },
+  {
+    "Term": "Queue",
+    "Definition": "A linear data structure that follows the First In, First Out (FIFO) principle. Elements are added at the back and removed from the front. \n\n**Applications:** Used in scheduling algorithms, managing shared resources, and data buffering. \n\n**Benefits:** Fair order of processing. \n\n**Disadvantages:** Limited to FIFO operations. \n\n**Pseudocode:**\n```\nqueue = []\nqueue.append(1)\nqueue.append(2)\nprint(queue.pop(0))  # Outputs 1\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-01T00:00:00Z",
+    "NextReview": "2024-08-02T00:00:00Z"
+  },
+  {
+    "Term": "Priority Queue",
+    "Definition": "An abstract data type where each element has a priority. Elements are served based on priority, not just order of insertion. \n\n**Applications:** Dijkstra's shortest path algorithm, scheduling algorithms. \n\n**Benefits:** Efficiently manages prioritized tasks. \n\n**Disadvantages:** Requires additional data structures like heaps for efficient implementation. \n\n**Pseudocode:**\n```\npriority_queue = []\npriority_queue.push((priority, item))\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-01T00:00:00Z",
+    "NextReview": "2024-08-02T00:00:00Z"
+  },
+  {
+    "Term": "Binary Tree",
+    "Definition": "A hierarchical data structure with a root node and two children at most for each node. \n\n**Applications:** Used in expression parsing, hierarchical data representation, and implementing search trees. \n\n**Benefits:** Fast searching, insertion, and deletion operations. \n\n**Disadvantages:** Can become unbalanced, leading to inefficient operations. \n\n**Pseudocode:**\n```\nNode:\n    data\n    left\n    right\n\nroot = Node(1)\nroot.left = Node(2)\nroot.right = Node(3)\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-01T00:00:00Z",
+    "NextReview": "2024-08-02T00:00:00Z"
+  },
+  {
+    "Term": "Binary Search Tree (BST)",
+    "Definition": "A binary tree in which each node has a comparable key and satisfies the condition: left child's key < parent node's key < right child's key. \n\n**Applications:** Used in searching algorithms, databases, and sets. \n\n**Benefits:** Fast search, insertion, and deletion operations when balanced. \n\n**Disadvantages:** Can become unbalanced, leading to degraded performance. \n\n**Pseudocode:**\n```\nNode:\n    data\n    left\n    right\n\n# Insert operation\nfunction insert(root, key):\n    if root is None:\n        return Node(key)\n    if key < root.data:\n        root.left = insert(root.left, key)\n    else:\n        root.right = insert(root.right, key)\n    return root\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-01T00:00:00Z",
+    "NextReview": "2024-08-02T00:00:00Z"
+  },
+  {
+    "Term": "AVL Tree",
+    "Definition": "A self-balancing binary search tree where the difference between heights of left and right subtrees cannot be more than one for all nodes. \n\n**Applications:** Used in database indexing and sets. \n\n**Benefits:** Ensures O(log n) time complexity for search, insertion, and deletion operations. \n\n**Disadvantages:** Requires additional rotations for balancing, complex implementation. \n\n**Pseudocode:**\n```\nNode:\n    data\n    height\n    left\n    right\n\n# Balance operation\nfunction balance(node):\n    # Re-balance the tree\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-01T00:00:00Z",
+    "NextReview": "2024-08-02T00:00:00Z"
+  },
+  {
+    "Term": "Red-Black Tree",
+    "Definition": "A type of self-balancing binary search tree where each node has an extra bit for denoting the color of the node, either red or black. \n\n**Applications:** Used in Java's TreeMap and C++'s STL map. \n\n**Benefits:** Guarantees O(log n) time complexity for search, insertion, and deletion. \n\n**Disadvantages:** Complex implementation, overhead of maintaining color property. \n\n**Pseudocode:**\n```\nNode:\n    data\n    color\n    left\n    right\n\n# Insert operation with balancing\nfunction insert(node, key):\n    # Insert like a BST, then fix the tree\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-01T00:00:00Z",
+    "NextReview": "2024-08-02T00:00:00Z"
+  },
+  {
+    "Term": "B-Tree",
+    "Definition": "A self-balancing tree data structure that maintains sorted data and allows searches, sequential access, insertions, and deletions in logarithmic time. \n\n**Applications:** Used in databases and file systems. \n\n**Benefits:** Efficient for disk access operations, supports large blocks. \n\n**Disadvantages:** Complex implementation, requires balancing. \n\n**Pseudocode:**\n```\nNode:\n    keys[]\n    children[]\n\n# Insert operation\nfunction insert(node, key):\n    # Insert and split nodes as needed\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-01T00:00:00Z",
+    "NextReview": "2024-08-02T00:00:00Z"
+  },
+  {
+    "Term": "Trie",
+    "Definition": "A tree-like data structure used to store a dynamic set of strings, where each node represents a single character of a string. \n\n**Applications:** Used in autocomplete and spell-checking algorithms. \n\n**Benefits:** Fast retrieval, efficient prefix search. \n\n**Disadvantages:** Requires more memory than binary trees. \n\n**Pseudocode:**\n```\nNode:\n    children\n    isEndOfWord\n\n# Insert operation\nfunction insert(word):\n    # Insert each character as node\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-01T00:00:00Z",
+    "NextReview": "2024-08-02T00:00:00Z"
+  },
+  {
+    "Term": "Graph",
+    "Definition": "A collection of nodes connected by edges. Graphs can be directed or undirected. \n\n**Applications:** Used in social networks, pathfinding algorithms, and network topology. \n\n**Benefits:** Represents complex relationships, flexible structure. \n\n**Disadvantages:** Complex algorithms required for traversal and manipulation. \n\n**Pseudocode:**\n```\ngraph = {\n    'A': ['B', 'C'],\n    'B': ['A', 'D'],\n    'C': ['A', 'D'],\n    'D': ['B', 'C']\n}\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-01T00:00:00Z",
+    "NextReview": "2024-08-02T00:00:00Z"
+  },
+  {
+    "Term": "Heap",
+    "Definition": "A special tree-based data structure that satisfies the heap property: if A is a parent node of B, then the key of node A is ordered with respect to the key of node B. \n\n**Applications:** Used in priority queues, heap sort algorithm. \n\n**Benefits:** Efficient for implementing priority queues. \n\n**Disadvantages:** Not suitable for ordered data operations. \n\n**Pseudocode:**\n```\nheap = []\nheap.push(1)\nheap.push(2)\n# Min heap property maintained\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-01T00:00:00Z",
+    "NextReview": "2024-08-02T00:00:00Z"
+  },
+  {
+    "Term": "Hash Table",
+    "Definition": "A data structure that stores key-value pairs. It uses a hash function to compute an index into an array of buckets, from which the desired value can be found. \n\n**Applications:** Used in databases, caches, and sets. \n\n**Benefits:** Provides fast search, insertion, and deletion operations. \n\n**Disadvantages:** Hash collisions can degrade performance, requires proper hashing function. \n\n**Pseudocode:**\n```\nhash_table = {}\nhash_table[key] = value\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-01T00:00:00Z",
+    "NextReview": "2024-08-02T00:00:00Z"
+  },
+  {
+    "Term": "Bloom Filter",
+    "Definition": "A space-efficient probabilistic data structure used to test whether an element is a member of a set. False positives are possible, but false negatives are not. \n\n**Applications:** Used in cache filtering, network routers, and spell-checkers. \n\n**Benefits:** Extremely space-efficient, fast lookups. \n\n**Disadvantages:** Allows false positives, not suitable for situations where exact match is required. \n\n**Pseudocode:**\n```\nbloom_filter = [False] * size\n# Hash functions to set bits\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-01T00:00:00Z",
+    "NextReview": "2024-08-02T00:00:00Z"
+  },
+  {
+    "Term": "Segment Tree",
+    "Definition": "A tree data structure used for storing intervals or segments, allowing querying of which of the stored segments contain a given point. \n\n**Applications:** Used in range query problems, like finding the sum or minimum value within an interval. \n\n**Benefits:** Efficient range queries and updates. \n\n**Disadvantages:** Complex implementation, requires O(n log n) space. \n\n**Pseudocode:**\n```\n# Build operation\nfunction buildTree(array):\n    # Construct segment tree\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-01T00:00:00Z",
+    "NextReview": "2024-08-02T00:00:00Z"
+  },
+  {
+    "Term": "Disjoint Set (Union-Find)",
+    "Definition": "A data structure that keeps track of a partition of a set into disjoint subsets, providing efficient union and find operations. \n\n**Applications:** Used in network connectivity, Kruskal's algorithm, and dynamic connectivity. \n\n**Benefits:** Supports efficient union and find operations. \n\n**Disadvantages:** Not suitable for ordered data operations. \n\n**Pseudocode:**\n```\n# Union and find operations\nfunction union(x, y):\n    # Merge two sets\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-01T00:00:00Z",
+    "NextReview": "2024-08-02T00:00:00Z"
+  },
+  {
+    "Term": "Skip List",
+    "Definition": "A data structure that allows fast search within an ordered sequence of elements. \n\n**Applications:** Used in databases and in-memory data structures for fast search operations. \n\n**Benefits:** Probabilistic balancing, efficient search operations. \n\n**Disadvantages:** Requires additional memory for pointers, complex implementation. \n\n**Pseudocode:**\n```\n# Insert operation\nfunction insert(value):\n    # Insert value at correct level\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-01T00:00:00Z",
+    "NextReview": "2024-08-02T00:00:00Z"
+  },
+  {
+    "Term": "K-D Tree",
+    "Definition": "A space-partitioning data structure for organizing points in a k-dimensional space. \n\n**Applications:** Used in nearest neighbor search, range search, and multidimensional search problems. \n\n**Benefits:** Efficient multidimensional searching. \n\n**Disadvantages:** Complex implementation, can become unbalanced. \n\n**Pseudocode:**\n```\n# Insert operation\nfunction insert(node, point, depth):\n    # Insert point based on depth\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-01T00:00:00Z",
+    "NextReview": "2024-08-02T00:00:00Z"
+  },
+  {
+    "Term": "Suffix Tree",
+    "Definition": "A compressed trie containing all the suffixes of a given text. \n\n**Applications:** Used in string searching algorithms, DNA sequencing, and data compression. \n\n**Benefits:** Fast substring searching, space-efficient representation. \n\n**Disadvantages:** Complex implementation, requires preprocessing. \n\n**Pseudocode:**\n```\n# Build operation\nfunction buildSuffixTree(text):\n    # Construct suffix tree\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-01T00:00:00Z",
+    "NextReview": "2024-08-02T00:00:00Z"
+  },
+  {
+    "Term": "Interval Tree",
+    "Definition": "A tree data structure to hold intervals and allow efficient searching of all intervals that overlap with any given interval or point. \n\n**Applications:** Used in computational geometry, scheduling, and network management. \n\n**Benefits:** Efficient interval overlap queries. \n\n**Disadvantages:** Complex implementation, requires additional storage for intervals. \n\n**Pseudocode:**\n```\n# Insert operation\nfunction insert(interval):\n    # Insert interval into tree\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-01T00:00:00Z",
+    "NextReview": "2024-08-02T00:00:00Z"
+  },
+  {
+    "Term": "R-Tree",
+    "Definition": "A tree data structure used for spatial access methods, i.e., for indexing multi-dimensional information. \n\n**Applications:** Used in geographical information systems, and in databases for spatial indexing. \n\n**Benefits:** Efficient spatial queries, dynamic structure. \n\n**Disadvantages:** Complex implementation, performance depends on the spatial distribution of data. \n\n**Pseudocode:**\n```\n# Insert operation\nfunction insert(rectangle):\n    # Insert rectangle into tree\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-01T00:00:00Z",
+    "NextReview": "2024-08-02T00:00:00Z"
+  },
+  {
+    "Term": "Fill in the Blank - Array Initialization (Python)",
+    "Definition": "Complete the code to initialize an array with five zeros:\n\n```python\narr = [0] __ * 5\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-01T00:00:00Z",
+    "NextReview": "2024-08-02T00:00:00Z"
+  },
+  {
+    "Term": "Fill in the Blank - Linked List (Python)",
+    "Definition": "Complete the code to define a simple linked list node:\n\n```python\nclass Node:\n    def __init__(self, data):\n        self.data = data\n        self.next = ___\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-01T00:00:00Z",
+    "NextReview": "2024-08-02T00:00:00Z"
+  },
+  {
+    "Term": "Fill in the Blank - Binary Tree Traversal (Python)",
+    "Definition": "Complete the code for in-order traversal of a binary tree:\n\n```python\ndef inorder(root):\n    if root:\n        inorder(root.left)\n        print(root.data)\n        ______(root.right)\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-01T00:00:00Z",
+    "NextReview": "2024-08-02T00:00:00Z"
+  },
+  {
+    "Term": "Fill in the Blank - Hash Table (Python)",
+    "Definition": "Complete the code to insert a key-value pair into a dictionary:\n\n```python\nhash_table = {}\nhash_table[____] = 'value'\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-01T00:00:00Z",
+    "NextReview": "2024-08-02T00:00:00Z"
+  }
+]

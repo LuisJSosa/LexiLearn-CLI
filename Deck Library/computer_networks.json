@@ -1,0 +1,135 @@
+[
+  {
+    "Term": "OSI Model",
+    "Definition": "The OSI (Open Systems Interconnection) Model is a conceptual framework used to understand and implement network communications between different systems.\n\n**Layers:**\n1. Physical Layer\n2. Data Link Layer\n3. Network Layer\n4. Transport Layer\n5. Session Layer\n6. Presentation Layer\n7. Application Layer\n\n**Applications:** Used for designing and understanding network architectures.\n\n**Benefits:** Provides a standard for different networks to communicate.\n\n**Disadvantages:** The model is theoretical and not all layers are used in all networks.\n\n**Pseudocode:**\n```pseudo\nfor layer in OSI_layers:\n    process(layer)\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-02T00:00:00Z",
+    "NextReview": "2024-08-03T00:00:00Z"
+  },
+  {
+    "Term": "TCP/IP Model",
+    "Definition": "The TCP/IP Model is a four-layer model used for network communications, simplifying the OSI model.\n\n**Layers:**\n1. Network Interface\n2. Internet\n3. Transport\n4. Application\n\n**Applications:** Basis for the Internet and most networks today.\n\n**Benefits:** Practical and widely used, aligns well with real-world networking protocols.\n\n**Disadvantages:** Less granular than OSI model.\n\n**Pseudocode:**\n```pseudo\nfor layer in TCP_IP_layers:\n    send_data(layer)\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-02T00:00:00Z",
+    "NextReview": "2024-08-03T00:00:00Z"
+  },
+  {
+    "Term": "IP Addressing",
+    "Definition": "IP Addressing involves assigning a unique address to each device on a network to identify and communicate with them.\n\n**Types:** IPv4 and IPv6\n\n**Applications:** Essential for routing and network management.\n\n**Benefits:** Allows unique identification and location of devices.\n\n**Disadvantages:** IPv4 has limited address space, leading to the adoption of IPv6.\n\n**Example:**\n- IPv4: 192.168.1.1\n- IPv6: 2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-02T00:00:00Z",
+    "NextReview": "2024-08-03T00:00:00Z"
+  },
+  {
+    "Term": "Subnetting",
+    "Definition": "Subnetting is the process of dividing a network into smaller subnetworks to improve performance and security.\n\n**Applications:** Efficient IP address management, reducing network congestion.\n\n**Benefits:** Reduces broadcast domains, enhances security, efficient IP utilization.\n\n**Disadvantages:** Complexity in configuration and management.\n\n**Pseudocode:**\n```pseudo\nfunction calculate_subnets(network_address, subnet_mask):\n    return subnets\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-02T00:00:00Z",
+    "NextReview": "2024-08-03T00:00:00Z"
+  },
+  {
+    "Term": "DNS (Domain Name System)",
+    "Definition": "DNS is a hierarchical naming system for translating human-friendly domain names (e.g., www.example.com) into IP addresses.\n\n**Applications:** Internet browsing, domain management.\n\n**Benefits:** User-friendly domain names, centralized management.\n\n**Disadvantages:** Centralized failure points, susceptible to attacks like DNS spoofing.\n\n**Pseudocode:**\n```pseudo\nfunction resolve_domain_name(domain_name):\n    return ip_address\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-02T00:00:00Z",
+    "NextReview": "2024-08-03T00:00:00Z"
+  },
+  {
+    "Term": "DHCP (Dynamic Host Configuration Protocol)",
+    "Definition": "DHCP is a network management protocol used to dynamically assign IP addresses to devices on a network.\n\n**Applications:** Automatic IP address assignment, network management.\n\n**Benefits:** Simplifies network administration, prevents address conflicts.\n\n**Disadvantages:** Centralized failure points, security vulnerabilities.\n\n**Pseudocode:**\n```pseudo\ndhcp_server.assign_ip_address(device)\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-02T00:00:00Z",
+    "NextReview": "2024-08-03T00:00:00Z"
+  },
+  {
+    "Term": "ARP (Address Resolution Protocol)",
+    "Definition": "ARP is used to map an IP address to a physical MAC address on a local network segment.\n\n**Applications:** IP-to-MAC address mapping, local network communication.\n\n**Benefits:** Enables communication within a local network.\n\n**Disadvantages:** Susceptible to ARP spoofing attacks.\n\n**Pseudocode:**\n```pseudo\nfunction resolve_mac_address(ip_address):\n    return mac_address\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-02T00:00:00Z",
+    "NextReview": "2024-08-03T00:00:00Z"
+  },
+  {
+    "Term": "Routing Protocols",
+    "Definition": "Routing protocols determine the best path for data packets to travel across a network.\n\n**Types:** RIP, OSPF, EIGRP, BGP\n\n**Applications:** Network routing, inter-network communication.\n\n**Benefits:** Efficient data packet delivery, dynamic network management.\n\n**Disadvantages:** Complexity in configuration, can be resource-intensive.\n\n**Pseudocode (OSPF Example):**\n```pseudo\nfunction ospf_routing_table_update():\n    for neighbor in neighbors:\n        update_routing_table(neighbor)\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-02T00:00:00Z",
+    "NextReview": "2024-08-03T00:00:00Z"
+  },
+  {
+    "Term": "VLAN (Virtual Local Area Network)",
+    "Definition": "VLAN is a logical grouping of network devices that allows devices on different physical LANs to communicate as if they were on the same physical LAN.\n\n**Applications:** Network segmentation, security, and traffic management.\n\n**Benefits:** Reduces broadcast domains, enhances security, simplifies management.\n\n**Disadvantages:** Complex configuration, requires compatible hardware.\n\n**Pseudocode:**\n```pseudo\nswitch.configure_vlan(vlan_id, ports)\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-02T00:00:00Z",
+    "NextReview": "2024-08-03T00:00:00Z"
+  },
+  {
+    "Term": "Network Address Translation (NAT)",
+    "Definition": "NAT is a process of modifying IP address information in IP packet headers while in transit across a traffic routing device.\n\n**Applications:** Conserving global IP addresses, improving security.\n\n**Benefits:** Allows multiple devices to share a single public IP, hides internal network structure.\n\n**Disadvantages:** Can complicate certain applications and protocols.\n\n**Pseudocode:**\n```pseudo\nfunction perform_nat_translation(private_ip, public_ip):\n    modify_packet_header(private_ip, public_ip)\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-02T00:00:00Z",
+    "NextReview": "2024-08-03T00:00:00Z"
+  },
+  {
+    "Term": "Firewall",
+    "Definition": "A firewall is a network security device that monitors and filters incoming and outgoing network traffic based on predetermined security rules.\n\n**Applications:** Network security, traffic management.\n\n**Benefits:** Protects against unauthorized access, manages network traffic.\n\n**Disadvantages:** Can become a bottleneck, complex configuration.\n\n**Pseudocode:**\n```pseudo\nfunction firewall_filter(packet):\n    if packet.destination in allowed_destinations:\n        allow_packet(packet)\n    else:\n        deny_packet(packet)\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-02T00:00:00Z",
+    "NextReview": "2024-08-03T00:00:00Z"
+  },
+  {
+    "Term": "VPN (Virtual Private Network)",
+    "Definition": "A VPN is a service that creates a secure, encrypted connection over a less secure network, such as the Internet.\n\n**Applications:** Secure remote access, data encryption.\n\n**Benefits:** Protects data, maintains privacy, bypasses geographical restrictions.\n\n**Disadvantages:** Can reduce network speed, potential security risks if not configured properly.\n\n**Pseudocode:**\n```pseudo\nvpn_client.connect(server_ip)\nencrypt_data(data)\nsend_data_over_tunnel(data)\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-02T00:00:00Z",
+    "NextReview": "2024-08-03T00:00:00Z"
+  },
+  {
+    "Term": "Wireless Networking",
+    "Definition": "Wireless networking allows devices to connect to a network using radio waves, eliminating the need for cables.\n\n**Technologies:** Wi-Fi, Bluetooth, LTE\n\n**Applications:** Mobile connectivity, IoT devices, network mobility.\n\n**Benefits:** Increased mobility, reduced infrastructure cost.\n\n**Disadvantages:** Security vulnerabilities, signal interference.\n\n**Pseudocode (Wi-Fi Connection):**\n```pseudo\nwifi_adapter.connect(ssid, password)\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-02T00:00:00Z",
+    "NextReview": "2024-08-03T00:00:00Z"
+  },
+  {
+    "Term": "Load Balancing",
+    "Definition": "Load balancing distributes network or application traffic across multiple servers to ensure reliability and performance.\n\n**Applications:** High-availability systems, distributed computing.\n\n**Benefits:** Improves system reliability, prevents overload, enhances performance.\n\n**Disadvantages:** Complexity in configuration, potential single point of failure if not properly set up.\n\n**Pseudocode:**\n```pseudo\nfunction distribute_load(request):\n    server = select_server_based_on_policy()\n    forward_request_to_server(request, server)\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-02T00:00:00Z",
+    "NextReview": "2024-08-03T00:00:00Z"
+  },
+  {
+    "Term": "Quality of Service (QoS)",
+    "Definition": "QoS refers to the set of technologies used to manage network traffic by prioritizing specific types of data.\n\n**Applications:** VoIP, streaming services, gaming.\n\n**Benefits:** Ensures consistent network performance, prioritizes critical applications.\n\n**Disadvantages:** Complex configuration, requires careful monitoring.\n\n**Pseudocode:**\n```pseudo\nfunction apply_qos_policy(packet):\n    if packet.type in high_priority_types:\n        prioritize_packet(packet)\n    else:\n        standard_packet_handling(packet)\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-02T00:00:00Z",
+    "NextReview": "2024-08-03T00:00:00Z"
+  },
+  {
+    "Term": "Fill in the Blank - TCP Connection Establishment (Python)",
+    "Definition": "Complete the code to simulate a TCP three-way handshake:\n```python\nclass TCPConnection:\n    def __init__(self):\n        self.state = 'CLOSED'\n\n    def connect(self):\n        self.state = 'SYN_SENT'\n        # Send SYN\n        # Wait for SYN-ACK\n        self.state = 'ESTABLISHED'\n\n    def close(self):\n        self.state = 'CLOSED'\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-02T00:00:00Z",
+    "NextReview": "2024-08-03T00:00:00Z"
+  },
+  {
+    "Term": "Fill in the Blank - HTTP Request (Python)",
+    "Definition": "Complete the code to send an HTTP GET request:\n```python\nimport requests\n\nresponse = requests.get('https://api.example.com/data')\nif response.status_code == 200:\n    print(response.json())\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-02T00:00:00Z",
+    "NextReview": "2024-08-03T00:00:00Z"
+  },
+  {
+    "Term": "Fill in the Blank - DNS Lookup (Python)",
+    "Definition": "Complete the code to perform a DNS lookup:\n```python\nimport socket\n\nhostname = 'example.com'\nip_address = socket.gethostbyname(hostname)\nprint(f'{hostname} resolves to {ip_address}')\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-02T00:00:00Z",
+    "NextReview": "2024-08-03T00:00:00Z"
+  },
+  {
+    "Term": "Fill in the Blank - Subnet Calculation (Python)",
+    "Definition": "Complete the code to calculate the subnet mask:\n```python\ndef calculate_subnet_mask(cidr):\n    host_bits = 32 - cidr\n    subnet_mask = (1 << 32) - (1 << host_bits)\n    return socket.inet_ntoa(struct.pack('>I', subnet_mask))\n\nsubnet = calculate_subnet_mask(24)\nprint(subnet)\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-02T00:00:00Z",
+    "NextReview": "2024-08-03T00:00:00Z"
+  }
+]

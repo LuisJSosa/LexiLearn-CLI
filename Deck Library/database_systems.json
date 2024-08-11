@@ -1,0 +1,128 @@
+[
+  {
+    "Term": "Database",
+    "Definition": "A database is an organized collection of structured information or data, typically stored electronically in a computer system. Databases are managed by Database Management Systems (DBMS).\n\n**Applications:** Websites, applications, financial systems, and more.\n\n**Benefits:** Efficient data storage, retrieval, and management.\n\n**Disadvantages:** Complexity of setup and maintenance.",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-05T00:00:00Z",
+    "NextReview": "2024-08-06T00:00:00Z"
+  },
+  {
+    "Term": "Relational Database",
+    "Definition": "A relational database organizes data into tables which can be linked—or related—based on data common to each. It uses Structured Query Language (SQL) for database management and operations.\n\n**Applications:** Customer databases, inventory systems, CRM systems.\n\n**Benefits:** Strong data consistency and integrity, supports complex queries.\n\n**Disadvantages:** Scaling issues with very large datasets, rigid schema.\n\n**Example:**\n- Tables: Customers, Orders\n- Relationships: Customers can have multiple orders.",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-05T00:00:00Z",
+    "NextReview": "2024-08-06T00:00:00Z"
+  },
+  {
+    "Term": "SQL (Structured Query Language)",
+    "Definition": "SQL is a standardized programming language used for managing relational databases and performing various operations on the data in them.\n\n**Key Commands:**\n- `SELECT`: Retrieve data\n- `INSERT`: Add data\n- `UPDATE`: Modify data\n- `DELETE`: Remove data\n\n**SQL Query Example:**\n```sql\nSELECT name, age FROM students WHERE age > 18;\n```\n\n**Explanation:** Selects the name and age of students older than 18.",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-05T00:00:00Z",
+    "NextReview": "2024-08-06T00:00:00Z"
+  },
+  {
+    "Term": "Primary Key",
+    "Definition": "A primary key is a unique identifier for a record in a table. It ensures that each record can be uniquely identified.\n\n**Applications:** Ensures data integrity and prevents duplicate records.\n\n**Benefits:** Enables efficient data retrieval and relationship definition.\n\n**Example:**\n- `student_id` in a Students table, where each student has a unique ID.",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-05T00:00:00Z",
+    "NextReview": "2024-08-06T00:00:00Z"
+  },
+  {
+    "Term": "Foreign Key",
+    "Definition": "A foreign key is a field (or collection of fields) in one table that refers to the primary key in another table, establishing a relationship between the tables.\n\n**Applications:** Used to enforce referential integrity between tables.\n\n**Example:**\n- `customer_id` in an Orders table referencing `customer_id` in a Customers table.",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-05T00:00:00Z",
+    "NextReview": "2024-08-06T00:00:00Z"
+  },
+  {
+    "Term": "Normalization",
+    "Definition": "Normalization is the process of organizing a database to reduce redundancy and improve data integrity. It involves dividing a database into two or more tables and defining relationships between the tables.\n\n**Normal Forms:**\n- First Normal Form (1NF)\n- Second Normal Form (2NF)\n- Third Normal Form (3NF)\n\n**Benefits:** Minimizes redundancy, ensures data dependencies make sense.\n\n**Disadvantages:** Can lead to complex queries and more joins.",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-05T00:00:00Z",
+    "NextReview": "2024-08-06T00:00:00Z"
+  },
+  {
+    "Term": "Denormalization",
+    "Definition": "Denormalization is the process of adding redundant data to a database to improve read performance at the cost of write performance and increased complexity.\n\n**Applications:** Data warehousing, read-heavy applications.\n\n**Benefits:** Faster read operations.\n\n**Disadvantages:** Increased storage costs, potential for data anomalies.",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-05T00:00:00Z",
+    "NextReview": "2024-08-06T00:00:00Z"
+  },
+  {
+    "Term": "Index",
+    "Definition": "An index is a data structure that improves the speed of data retrieval operations on a database table at the cost of additional writes and storage space.\n\n**Types:**\n- B-tree index\n- Hash index\n\n**Benefits:** Faster query execution times.\n\n**Disadvantages:** Increases the time required for data modification operations (INSERT, UPDATE, DELETE).",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-05T00:00:00Z",
+    "NextReview": "2024-08-06T00:00:00Z"
+  },
+  {
+    "Term": "JOIN",
+    "Definition": "A JOIN clause in SQL is used to combine rows from two or more tables based on a related column between them.\n\n**Types of Joins:**\n- INNER JOIN\n- LEFT JOIN\n- RIGHT JOIN\n- FULL OUTER JOIN\n\n**SQL Example:**\n```sql\nSELECT customers.name, orders.order_date\nFROM customers\nINNER JOIN orders ON customers.customer_id = orders.customer_id;\n```\n\n**Explanation:** Retrieves customer names and their order dates.",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-05T00:00:00Z",
+    "NextReview": "2024-08-06T00:00:00Z"
+  },
+  {
+    "Term": "ACID Properties",
+    "Definition": "ACID is a set of properties that guarantee reliable processing of database transactions.\n\n**Properties:**\n- Atomicity: Transactions are all-or-nothing\n- Consistency: Transactions bring the database from one valid state to another\n- Isolation: Transactions are isolated from one another\n- Durability: Completed transactions persist even after a system failure\n\n**Benefits:** Ensures database reliability and integrity.",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-05T00:00:00Z",
+    "NextReview": "2024-08-06T00:00:00Z"
+  },
+  {
+    "Term": "Transaction",
+    "Definition": "A transaction is a sequence of database operations that are treated as a single unit of work. It is either fully completed or not executed at all.\n\n**SQL Example:**\n```sql\nBEGIN TRANSACTION;\nUPDATE accounts SET balance = balance - 100 WHERE account_id = 1;\nUPDATE accounts SET balance = balance + 100 WHERE account_id = 2;\nCOMMIT;\n```\n\n**Explanation:** Transfers $100 from account 1 to account 2 in an atomic operation.",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-05T00:00:00Z",
+    "NextReview": "2024-08-06T00:00:00Z"
+  },
+  {
+    "Term": "Database Schema",
+    "Definition": "A database schema is the skeleton structure that represents the logical view of the entire database. It defines how data is organized and how the relations among them are associated.\n\n**Components:**\n- Tables\n- Columns\n- Data types\n- Relationships",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-05T00:00:00Z",
+    "NextReview": "2024-08-06T00:00:00Z"
+  },
+  {
+    "Term": "Entity-Relationship (ER) Model",
+    "Definition": "An Entity-Relationship model is a conceptual blueprint of how data is related or connected. It uses entities, attributes, and relationships to design databases.\n\n**Components:**\n- Entities: Objects or things in the real world\n- Attributes: Properties of entities\n- Relationships: Associations between entities",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-05T00:00:00Z",
+    "NextReview": "2024-08-06T00:00:00Z"
+  },
+  {
+    "Term": "NoSQL Database",
+    "Definition": "NoSQL databases provide a mechanism for storage and retrieval of data that is modeled in means other than the tabular relations used in relational databases.\n\n**Types:**\n- Document Store\n- Key-Value Store\n- Wide-Column Store\n- Graph Database\n\n**Benefits:** Scalability, flexibility, and handling unstructured data.\n\n**Disadvantages:** Lack of standardization, eventual consistency.",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-05T00:00:00Z",
+    "NextReview": "2024-08-06T00:00:00Z"
+  },
+  {
+    "Term": "Fill in the Blank - SQL SELECT Statement",
+    "Definition": "Complete the SQL query to select all columns from the `employees` table:\n```sql\nSELECT * FROM employees;\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-05T00:00:00Z",
+    "NextReview": "2024-08-06T00:00:00Z"
+  },
+  {
+    "Term": "Fill in the Blank - SQL INSERT Statement",
+    "Definition": "Complete the SQL query to insert a new employee record:\n```sql\nINSERT INTO employees (name, position) VALUES ('Alice', 'Engineer');\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-05T00:00:00Z",
+    "NextReview": "2024-08-06T00:00:00Z"
+  },
+  {
+    "Term": "Fill in the Blank - SQL JOIN Statement",
+    "Definition": "Complete the SQL query to join `customers` and `orders` tables:\n```sql\nSELECT customers.name, orders.date\nFROM customers\nINNER JOIN orders ON customers.id = orders.customer_id;\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-05T00:00:00Z",
+    "NextReview": "2024-08-06T00:00:00Z"
+  },
+  {
+    "Term": "Fill in the Blank - SQL UPDATE Statement",
+    "Definition": "Complete the SQL query to update the salary of an employee:\n```sql\nUPDATE employees SET salary = 60000 WHERE id = 5;\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-05T00:00:00Z",
+    "NextReview": "2024-08-06T00:00:00Z"
+  }
+]

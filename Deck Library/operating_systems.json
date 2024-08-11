@@ -1,0 +1,114 @@
+[
+  {
+    "Term": "Operating System",
+    "Definition": "An Operating System (OS) is a software that manages computer hardware and software resources and provides common services for computer programs.\n\n**Functions:** Process management, memory management, file system management, and device management.\n\n**Applications:** Provides an interface between user and hardware.\n\n**Benefits:** Facilitates user interaction, manages resources efficiently.\n\n**Disadvantages:** Complexity, potential for bugs and vulnerabilities.\n\n**Pseudocode:**\n```pseudo\nfunction manage_resources():\n    allocate_resources()\n    deallocate_resources()\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-05T00:00:00Z",
+    "NextReview": "2024-08-06T00:00:00Z"
+  },
+  {
+    "Term": "Process Management",
+    "Definition": "Process management involves managing processes in a multi-tasking operating system, handling creation, scheduling, and termination.\n\n**Applications:** Multitasking environments, running multiple applications.\n\n**Benefits:** Efficient CPU utilization, better system responsiveness.\n\n**Disadvantages:** Complexity in scheduling algorithms, potential for deadlock.\n\n**Pseudocode:**\n```pseudo\nfunction schedule_processes():\n    for process in processes:\n        execute_process(process)\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-05T00:00:00Z",
+    "NextReview": "2024-08-06T00:00:00Z"
+  },
+  {
+    "Term": "Memory Management",
+    "Definition": "Memory management is the process of managing computer memory, involving allocation and deallocation of memory blocks.\n\n**Applications:** Ensures memory is used efficiently, prevents memory leaks.\n\n**Benefits:** Optimizes memory usage, improves system performance.\n\n**Disadvantages:** Complexity, potential for fragmentation.\n\n**Pseudocode:**\n```pseudo\nfunction allocate_memory(process):\n    find_free_block(process.size)\n    assign_block(process)\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-05T00:00:00Z",
+    "NextReview": "2024-08-06T00:00:00Z"
+  },
+  {
+    "Term": "Virtual Memory",
+    "Definition": "Virtual memory is a memory management capability that provides an \"idealized abstraction of the storage resources that are actually available on a given machine.\"\n\n**Applications:** Enables larger applications to run on systems with limited physical memory.\n\n**Benefits:** Increased memory capacity, isolation between processes.\n\n**Disadvantages:** Increased complexity, potential for thrashing.\n\n**Pseudocode:**\n```pseudo\nfunction access_memory(address):\n    if address in physical_memory:\n        return physical_memory[address]\n    else:\n        swap_in(address)\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-05T00:00:00Z",
+    "NextReview": "2024-08-06T00:00:00Z"
+  },
+  {
+    "Term": "File System",
+    "Definition": "A file system is a method and data structure that an operating system uses to control how data is stored and retrieved.\n\n**Applications:** Organizes and manages files on storage devices.\n\n**Benefits:** Efficient data management, access control.\n\n**Disadvantages:** Potential for fragmentation, limited by underlying hardware.\n\n**Pseudocode:**\n```pseudo\nfunction create_file(name, data):\n    allocate_space(data)\n    write_data_to_disk(name, data)\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-05T00:00:00Z",
+    "NextReview": "2024-08-06T00:00:00Z"
+  },
+  {
+    "Term": "I/O Management",
+    "Definition": "I/O management involves coordinating and managing input and output operations on the computer.\n\n**Applications:** Controls access to devices like hard drives, printers, and keyboards.\n\n**Benefits:** Efficient device management, improved system performance.\n\n**Disadvantages:** Complexity, potential for bottlenecks.\n\n**Pseudocode:**\n```pseudo\nfunction perform_io_operation(device, data):\n    lock_device(device)\n    transfer_data(device, data)\n    unlock_device(device)\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-05T00:00:00Z",
+    "NextReview": "2024-08-06T00:00:00Z"
+  },
+  {
+    "Term": "Concurrency",
+    "Definition": "Concurrency in operating systems is the ability to execute multiple processes simultaneously, providing better system utilization and responsiveness.\n\n**Applications:** Multithreading, parallel computing.\n\n**Benefits:** Efficient CPU utilization, increased throughput.\n\n**Disadvantages:** Complexity, potential for race conditions and deadlocks.\n\n**Pseudocode:**\n```pseudo\nfunction execute_concurrent_processes(process_list):\n    for process in process_list:\n        start_process(process)\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-05T00:00:00Z",
+    "NextReview": "2024-08-06T00:00:00Z"
+  },
+  {
+    "Term": "Deadlock",
+    "Definition": "A deadlock is a state in a multi-process system where two or more processes are unable to proceed because each is waiting for a resource held by another.\n\n**Conditions:** Mutual exclusion, hold and wait, no preemption, circular wait.\n\n**Applications:** Resource allocation, process synchronization.\n\n**Benefits:** Ensures resource integrity.\n\n**Disadvantages:** Can halt system progress, complex to detect and resolve.\n\n**Pseudocode:**\n```pseudo\nfunction detect_deadlock(process_graph):\n    if has_cycle(process_graph):\n        return true\n    return false\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-05T00:00:00Z",
+    "NextReview": "2024-08-06T00:00:00Z"
+  },
+  {
+    "Term": "Inter-Process Communication (IPC)",
+    "Definition": "IPC is a mechanism that allows processes to communicate with each other and synchronize their actions.\n\n**Methods:** Pipes, message queues, shared memory, semaphores.\n\n**Applications:** Process synchronization, data sharing.\n\n**Benefits:** Facilitates data exchange, process coordination.\n\n**Disadvantages:** Complexity, potential security vulnerabilities.\n\n**Pseudocode:**\n```pseudo\nfunction send_message(queue, message):\n    add_to_queue(queue, message)\n    notify_receiver()\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-05T00:00:00Z",
+    "NextReview": "2024-08-06T00:00:00Z"
+  },
+  {
+    "Term": "Semaphore",
+    "Definition": "A semaphore is a synchronization primitive used to control access to a common resource by multiple processes in a concurrent system.\n\n**Types:** Binary semaphore, counting semaphore.\n\n**Applications:** Process synchronization, resource management.\n\n**Benefits:** Simple and efficient for process synchronization.\n\n**Disadvantages:** Can lead to deadlock if not used carefully.\n\n**Pseudocode:**\n```pseudo\nsemaphore.acquire()\nperform_operation()\nsemaphore.release()\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-05T00:00:00Z",
+    "NextReview": "2024-08-06T00:00:00Z"
+  },
+  {
+    "Term": "Scheduling Algorithms",
+    "Definition": "Scheduling algorithms determine the order in which processes are executed by the CPU.\n\n**Types:** FCFS, SJF, Round Robin, Priority Scheduling.\n\n**Applications:** Process management, CPU utilization.\n\n**Benefits:** Optimizes CPU usage, improves system performance.\n\n**Disadvantages:** Each algorithm has its own trade-offs, such as starvation in SJF.\n\n**Pseudocode (Round Robin):**\n```pseudo\nfunction schedule_processes(process_list, time_quantum):\n    for process in process_list:\n        execute_for(process, time_quantum)\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-05T00:00:00Z",
+    "NextReview": "2024-08-06T00:00:00Z"
+  },
+  {
+    "Term": "Monolithic Kernel",
+    "Definition": "A monolithic kernel is a type of kernel where all OS services run in the kernel space.\n\n**Applications:** Traditional UNIX, Linux.\n\n**Benefits:** High performance, efficient system call interface.\n\n**Disadvantages:** Lack of modularity, potential for security vulnerabilities.\n\n**Pseudocode:**\n```pseudo\nfunction handle_system_call(call):\n    execute_in_kernel_space(call)\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-05T00:00:00Z",
+    "NextReview": "2024-08-06T00:00:00Z"
+  },
+  {
+    "Term": "Microkernel",
+    "Definition": "A microkernel is a type of kernel where only essential OS services run in the kernel space, with other services running in user space.\n\n**Applications:** Minix, QNX.\n\n**Benefits:** Modular design, increased system stability and security.\n\n**Disadvantages:** Potential for lower performance due to context switching.\n\n**Pseudocode:**\n```pseudo\nfunction handle_system_call(call):\n    delegate_to_user_space_service(call)\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-05T00:00:00Z",
+    "NextReview": "2024-08-06T00:00:00Z"
+  },
+  {
+    "Term": "Fill in the Blank - Process Creation (Python)",
+    "Definition": "Complete the code to create a new process using the subprocess module:\n```python\nimport subprocess\n\nprocess = subprocess.Popen(['ls', '-l'])\nprocess.wait()\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-05T00:00:00Z",
+    "NextReview": "2024-08-06T00:00:00Z"
+  },
+  {
+    "Term": "Fill in the Blank - File Operations (Python)",
+    "Definition": "Complete the code to read a file line by line:\n```python\nwith open('file.txt', 'r') as file:\n    for line in file:\n        print(line)\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-05T00:00:00Z",
+    "NextReview": "2024-08-06T00:00:00Z"
+  },
+  {
+    "Term": "Fill in the Blank - Thread Synchronization (Python)",
+    "Definition": "Complete the code to synchronize threads using a lock:\n```python\nimport threading\n\nlock = threading.Lock()\n\ndef synchronized_function():\n    with lock:\n        # Critical section\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-05T00:00:00Z",
+    "NextReview": "2024-08-06T00:00:00Z"
+  }
+]

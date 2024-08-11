@@ -1,0 +1,42 @@
+# Ignore the .git directory and any Git-related files
+.git
+.gitignore
+
+# Ignore OS or editor specific files
+.DS_Store
+Thumbs.db
+
+# Ignore Go build artifacts
+*.exe
+*.dll
+*.so
+*.dylib
+*.a
+*.out
+
+# Ignore test output
+*.test
+
+# Ignore directories and files that are not needed for the application to run
+docs/
+Scratches and Consoles/
+External Libraries/
+*.json
+
+# Ignore temporary files and cache
+*.log
+*.cache
+*.tmp
+*.swp
+
+# Ignore binary executable if accidentally built it locally
+lexilearn
+
+# Ignore editor/project specific files
+*.iml
+.idea/
+.vscode/
+
+# Ignore any build or temporary files
+build/
+dist/

@@ -1,0 +1,156 @@
+[
+  {
+    "Term": "SQL (Structured Query Language)",
+    "Definition": "SQL is a domain-specific language used in programming and designed for managing data held in a relational database management system (RDBMS), or for stream processing in a relational data stream management system (RDSMS).\n\n**Key Features:** Querying data, inserting data, updating data, and managing database schema.",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-05T00:00:00Z",
+    "NextReview": "2024-08-06T00:00:00Z"
+  },
+  {
+    "Term": "SELECT Statement",
+    "Definition": "The SELECT statement is used to query the database and retrieve data. It is one of the most commonly used SQL commands.\n\n**Example:**\n```sql\nSELECT first_name, last_name FROM employees WHERE department = 'Sales';\n```\n\n**Explanation:** Retrieves the first and last names of employees in the Sales department.",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-05T00:00:00Z",
+    "NextReview": "2024-08-06T00:00:00Z"
+  },
+  {
+    "Term": "WHERE Clause",
+    "Definition": "The WHERE clause is used to filter records that meet certain conditions. It is often used with SELECT, UPDATE, DELETE statements.\n\n**Example:**\n```sql\nSELECT * FROM orders WHERE amount > 100;\n```\n\n**Explanation:** Retrieves all orders where the amount is greater than 100.",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-05T00:00:00Z",
+    "NextReview": "2024-08-06T00:00:00Z"
+  },
+  {
+    "Term": "INSERT INTO Statement",
+    "Definition": "The INSERT INTO statement is used to add new rows of data to a table.\n\n**Example:**\n```sql\nINSERT INTO employees (first_name, last_name, department) VALUES ('John', 'Doe', 'Marketing');\n```\n\n**Explanation:** Adds a new employee named John Doe to the Marketing department.",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-05T00:00:00Z",
+    "NextReview": "2024-08-06T00:00:00Z"
+  },
+  {
+    "Term": "UPDATE Statement",
+    "Definition": "The UPDATE statement is used to modify existing records in a table.\n\n**Example:**\n```sql\nUPDATE employees SET department = 'Engineering' WHERE last_name = 'Smith';\n```\n\n**Explanation:** Changes the department of employees with the last name Smith to Engineering.",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-05T00:00:00Z",
+    "NextReview": "2024-08-06T00:00:00Z"
+  },
+  {
+    "Term": "DELETE Statement",
+    "Definition": "The DELETE statement is used to remove records from a table.\n\n**Example:**\n```sql\nDELETE FROM customers WHERE country = 'Canada';\n```\n\n**Explanation:** Removes all customers from the table whose country is Canada.",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-05T00:00:00Z",
+    "NextReview": "2024-08-06T00:00:00Z"
+  },
+  {
+    "Term": "JOIN Clause",
+    "Definition": "The JOIN clause is used to combine rows from two or more tables based on a related column between them.\n\n**Types of Joins:**\n- INNER JOIN\n- LEFT JOIN\n- RIGHT JOIN\n- FULL OUTER JOIN\n\n**Example:**\n```sql\nSELECT orders.id, customers.name FROM orders INNER JOIN customers ON orders.customer_id = customers.id;\n```\n\n**Explanation:** Retrieves order IDs and customer names by joining the orders and customers tables.",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-05T00:00:00Z",
+    "NextReview": "2024-08-06T00:00:00Z"
+  },
+  {
+    "Term": "INNER JOIN",
+    "Definition": "The INNER JOIN clause selects records that have matching values in both tables.\n\n**Example:**\n```sql\nSELECT * FROM employees INNER JOIN departments ON employees.department_id = departments.id;\n```\n\n**Explanation:** Retrieves all employees and their departments where there is a match between the employee and department tables.",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-05T00:00:00Z",
+    "NextReview": "2024-08-06T00:00:00Z"
+  },
+  {
+    "Term": "LEFT JOIN",
+    "Definition": "The LEFT JOIN clause returns all records from the left table (table1), and the matched records from the right table (table2). The result is NULL from the right side if there is no match.\n\n**Example:**\n```sql\nSELECT employees.name, orders.id FROM employees LEFT JOIN orders ON employees.id = orders.employee_id;\n```\n\n**Explanation:** Retrieves all employee names and order IDs, with NULL for orders if an employee has no orders.",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-05T00:00:00Z",
+    "NextReview": "2024-08-06T00:00:00Z"
+  },
+  {
+    "Term": "RIGHT JOIN",
+    "Definition": "The RIGHT JOIN clause returns all records from the right table (table2), and the matched records from the left table (table1). The result is NULL from the left side if there is no match.\n\n**Example:**\n```sql\nSELECT employees.name, projects.name FROM employees RIGHT JOIN projects ON employees.project_id = projects.id;\n```\n\n**Explanation:** Retrieves all project names and employee names, with NULL for employees if a project has no employees.",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-05T00:00:00Z",
+    "NextReview": "2024-08-06T00:00:00Z"
+  },
+  {
+    "Term": "FULL OUTER JOIN",
+    "Definition": "The FULL OUTER JOIN clause returns all records when there is a match in either left or right table records. The result is NULL from one side when there is no match.\n\n**Example:**\n```sql\nSELECT employees.name, departments.name FROM employees FULL OUTER JOIN departments ON employees.department_id = departments.id;\n```\n\n**Explanation:** Retrieves all employee and department names, with NULL where there is no match.",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-05T00:00:00Z",
+    "NextReview": "2024-08-06T00:00:00Z"
+  },
+  {
+    "Term": "GROUP BY Clause",
+    "Definition": "The GROUP BY clause groups rows that have the same values into summary rows, like \"find the number of customers in each country.\"\n\n**Example:**\n```sql\nSELECT country, COUNT(*) FROM customers GROUP BY country;\n```\n\n**Explanation:** Retrieves the number of customers in each country.",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-05T00:00:00Z",
+    "NextReview": "2024-08-06T00:00:00Z"
+  },
+  {
+    "Term": "HAVING Clause",
+    "Definition": "The HAVING clause is used to filter records that work on summarized GROUP BY results.\n\n**Example:**\n```sql\nSELECT department, COUNT(*) FROM employees GROUP BY department HAVING COUNT(*) > 5;\n```\n\n**Explanation:** Retrieves departments with more than 5 employees.",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-05T00:00:00Z",
+    "NextReview": "2024-08-06T00:00:00Z"
+  },
+  {
+    "Term": "ORDER BY Clause",
+    "Definition": "The ORDER BY clause is used to sort the result set of a query by one or more columns.\n\n**Example:**\n```sql\nSELECT * FROM products ORDER BY price DESC;\n```\n\n**Explanation:** Retrieves all products sorted by price in descending order.",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-05T00:00:00Z",
+    "NextReview": "2024-08-06T00:00:00Z"
+  },
+  {
+    "Term": "DISTINCT Keyword",
+    "Definition": "The DISTINCT keyword is used to return only distinct (different) values in the result set.\n\n**Example:**\n```sql\nSELECT DISTINCT country FROM customers;\n```\n\n**Explanation:** Retrieves a list of distinct countries from the customers table.",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-05T00:00:00Z",
+    "NextReview": "2024-08-06T00:00:00Z"
+  },
+  {
+    "Term": "Aggregate Functions",
+    "Definition": "Aggregate functions perform a calculation on a set of values and return a single value. Common aggregate functions include:\n- COUNT()\n- SUM()\n- AVG()\n- MIN()\n- MAX()\n\n**Example:**\n```sql\nSELECT AVG(salary) FROM employees;\n```\n\n**Explanation:** Calculates the average salary of all employees.",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-05T00:00:00Z",
+    "NextReview": "2024-08-06T00:00:00Z"
+  },
+  {
+    "Term": "SQL Subquery",
+    "Definition": "A subquery is a query nested inside another query. It is used to retrieve data that will be used in the main query.\n\n**Example:**\n```sql\nSELECT name FROM employees WHERE department_id IN (SELECT id FROM departments WHERE location = 'New York');\n```\n\n**Explanation:** Retrieves employee names in departments located in New York.",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-05T00:00:00Z",
+    "NextReview": "2024-08-06T00:00:00Z"
+  },
+  {
+    "Term": "SQL Index",
+    "Definition": "An index is a database object that improves the speed of data retrieval operations on a table at the cost of additional writes and storage space.\n\n**Example:**\n```sql\nCREATE INDEX idx_name ON employees (last_name);\n```\n\n**Explanation:** Creates an index on the last_name column of the employees table to speed up searches.",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-05T00:00:00Z",
+    "NextReview": "2024-08-06T00:00:00Z"
+  },
+  {
+    "Term": "Fill in the Blank - SQL SELECT Statement",
+    "Definition": "Complete the SQL query to select all columns from the `employees` table:\n```sql\nSELECT * FROM employees;\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-05T00:00:00Z",
+    "NextReview": "2024-08-06T00:00:00Z"
+  },
+  {
+    "Term": "Fill in the Blank - SQL INSERT Statement",
+    "Definition": "Complete the SQL query to insert a new employee record:\n```sql\nINSERT INTO employees (name, position) VALUES ('Alice', 'Engineer');\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-05T00:00:00Z",
+    "NextReview": "2024-08-06T00:00:00Z"
+  },
+  {
+    "Term": "Fill in the Blank - SQL JOIN Statement",
+    "Definition": "Complete the SQL query to join `customers` and `orders` tables:\n```sql\nSELECT customers.name, orders.date\nFROM customers\nINNER JOIN orders ON customers.id = orders.customer_id;\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-05T00:00:00Z",
+    "NextReview": "2024-08-06T00:00:00Z"
+  },
+  {
+    "Term": "Fill in the Blank - SQL UPDATE Statement",
+    "Definition": "Complete the SQL query to update the salary of an employee:\n```sql\nUPDATE employees SET salary = 60000 WHERE id = 5;\n```",
+    "CorrectCount": 0,
+    "LastReview": "2024-08-05T00:00:00Z",
+    "NextReview": "2024-08-06T00:00:00Z"
+  }
+]
