@@ -28,5 +28,8 @@ WORKDIR /app
 # Copy the pre-built binary from the builder
 COPY --from=builder /app/lexilearn .
 
+# Ensure the decks directory exists in the container
+RUN mkdir -p /app/decks
+
 # Run the Go application
 CMD ["./lexilearn"]
