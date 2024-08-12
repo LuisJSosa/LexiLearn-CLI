@@ -24,13 +24,13 @@ Before you begin, ensure you have the following installed on your system:
 2. Clone the LexiLearn repository using the following command:
 
    ```sh
-   git clone https://github.com/LuisJSosa/GoVocab-CLI.git
+   git clone https://github.com/LuisJSosa/LexiLearn-CLI.git
    ```
 
 3. Navigate to the LexiLearn directory:
 
    ```sh
-   cd GoVocab-CLI
+   cd LexiLearn-CLI
    ```
 
 ## Install Go
@@ -52,7 +52,7 @@ Before you begin, ensure you have the following installed on your system:
 1. Ensure you are in the LexiLearn project directory:
 
    ```sh
-   cd GoVocab-CLI
+   cd LexiLearn-CLI
    ```
 
 2. Install the necessary dependencies:
