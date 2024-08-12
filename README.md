@@ -44,8 +44,8 @@ To set up the LexiLearn CLI application, follow these steps:
 First, you need to clone the repository and navigate to the LexiLearn directory:
 
 ```sh
-git clone https://github.com/LuisJSosa/GoVocab-CLI.git
-cd GoVocab-CLI
+git clone https://github.com/LuisJSosa/LexiLearn-CLI.git
+cd LexiLearn-CLI
 ```
 
 ### Step 2: Install Go and Necessary Tools
