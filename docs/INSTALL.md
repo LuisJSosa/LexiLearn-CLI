@@ -52,7 +52,7 @@ Before you begin, ensure you have the following installed on your system:
 1. Ensure you are in the LexiLearn project directory:
 
    ```sh
-   cd GoVocab-CLI
+   cd LexiLearn-CLI
    ```
 
 2. Install the necessary dependencies:
