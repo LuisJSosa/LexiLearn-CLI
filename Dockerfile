@@ -4,7 +4,7 @@ FROM golang:1.22.4 as builder
 # Set the author label
 LABEL authors="Luis Sosa"
 
-# Set the working directory inside the container
+# Set the working directory inside the builder container
 WORKDIR /app
 
 # Copy go.mod and go.sum files for dependency installation
@@ -28,8 +28,8 @@ WORKDIR /app
 # Copy the pre-built binary from the builder
 COPY --from=builder /app/lexilearn .
 
-# Ensure the decks directory exists in the container
-RUN mkdir -p /app/decks
+# Ensure the decks directory exists in the container and copy any necessary files
+COPY decks ./decks
 
 # Run the Go application
 CMD ["./lexilearn"]

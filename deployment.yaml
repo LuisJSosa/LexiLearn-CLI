@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lexilearn-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: lexilearn
+  template:
+    metadata:
+      labels:
+        app: lexilearn
+    spec:
+      containers:
+      - name: lexilearn
+        image: luisjsosa/govocab-cli:latest
+        tty: true
+        stdin: true
+        volumeMounts:
+        - mountPath: "/app/decks"
+          name: decks-storage
+      volumes:
+      - name: decks-storage
+        persistentVolumeClaim:
+          claimName: lexi-pvc

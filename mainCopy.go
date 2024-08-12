@@ -44,39 +44,31 @@ func main() {
 	loadVocabList()
 	defer saveVocabList()
 
-	reader := bufio.NewReader(os.Stdin)
 	for {
 		displayMenu()
-		choice, err := readInt(reader)
-		if err != nil || choice < 1 || choice > 5 {
+		var choice int
+		_, err := fmt.Scanf("%d", &choice)
+		if err != nil {
 			fmt.Println("Invalid input. Please enter a number between 1 and 5.")
 			continue
 		}
 
 		switch choice {
 		case 1:
-			addWord(reader)
+			addWord()
 		case 2:
-			listWords(reader)
+			listWords()
 		case 3:
-			reviewWords(reader)
+			reviewWords()
 		case 4:
-			manageDecks(reader)
+			manageDecks()
 		case 5:
 			fmt.Println("Exiting LexiLearn... Goodbye!")
 			return
+		default:
+			fmt.Println("Invalid choice. Please enter a number between 1 and 5.")
 		}
 	}
-}
-
-// readInt reads an integer from the user input and handles invalid inputs.
-func readInt(reader *bufio.Reader) (int, error) {
-	input, err := reader.ReadString('\n')
-	if err != nil {
-		return 0, err
-	}
-	input = strings.TrimSpace(input)
-	return strconv.Atoi(input)
 }
 
 // displayMenu prints the main menu to the terminal.
@@ -96,7 +88,8 @@ func displayMenu() {
 }
 
 // addWord prompts the user to enter a new word and its definition, and adds it to the vocabulary list
-func addWord(reader *bufio.Reader) {
+func addWord() {
+	reader := bufio.NewReader(os.Stdin)
 	clearScreen()
 	if deckName != "Default" {
 		color.Cyan("You chose to add a new vocabulary word, in Deck: %s.", deckName)
@@ -133,7 +126,7 @@ func addWord(reader *bufio.Reader) {
 }
 
 // listWords prints all the words in the vocabulary list
-func listWords(reader *bufio.Reader) {
+func listWords() {
 	clearScreen()
 
 	if len(vocabList) == 0 {
@@ -145,6 +138,7 @@ func listWords(reader *bufio.Reader) {
 		fmt.Printf("%d. %s: %s (Next review: %s)\n", i+1, word.Term, word.Definition, word.NextReview.Format("01-02-2006 03:04 PM"))
 	}
 	fmt.Println("\nEnter the number of the word to delete or press Enter to return to the main menu:")
+	reader := bufio.NewReader(os.Stdin)
 	input, _ := reader.ReadString('\n')
 	input = strings.TrimSpace(input)
 	if input != "" {
@@ -159,13 +153,14 @@ func listWords(reader *bufio.Reader) {
 }
 
 // reviewWords allows the user to review vocabulary words
-func reviewWords(reader *bufio.Reader) {
+func reviewWords() {
 	if len(vocabList) == 0 {
 		color.Red("No vocabulary words found to review.")
 		time.Sleep(2 * time.Second)
 		return
 	}
 
+	reader := bufio.NewReader(os.Stdin)
 	startTime := time.Now()
 
 	for {
@@ -310,7 +305,7 @@ func deleteWord(index int) {
 }
 
 // manageDecks manages the different vocabulary decks.
-func manageDecks(reader *bufio.Reader) {
+func manageDecks() {
 	for {
 		clearScreen()
 		fmt.Println("======================================")
@@ -330,8 +325,9 @@ func manageDecks(reader *bufio.Reader) {
 		fmt.Println("======================================")
 		fmt.Print("Enter your choice: ")
 
-		choice, err := readInt(reader)
-		if err != nil || choice < 1 || choice > 6 {
+		var choice int
+		_, err := fmt.Scanf("%d", &choice)
+		if err != nil {
 			fmt.Println("Invalid input. Please enter a number between 1 and 6.")
 			continue
 		}
@@ -340,15 +336,18 @@ func manageDecks(reader *bufio.Reader) {
 		case 1:
 			listDecks()
 		case 2:
-			createDeck(reader)
+			createDeck()
 		case 3:
-			selectDeck(reader)
+			selectDeck()
 		case 4:
-			renameDeck(reader)
+			renameDeck()
 		case 5:
-			deleteDeck(reader)
+			deleteDeck()
 		case 6:
 			return
+		default:
+			fmt.Println("Invalid choice. Please enter a number between 1 and 6.")
+			time.Sleep(2 * time.Second)
 		}
 	}
 }
@@ -362,8 +361,10 @@ func listDecks() {
 	}
 
 	color.Blue("Available Decks:")
+	deckFiles := []string{}
 	for i, file := range files {
 		if strings.HasSuffix(file.Name(), ".json") {
+			deckFiles = append(deckFiles, file.Name())
 			fmt.Printf("%d. %s\n", i+1, strings.TrimSuffix(file.Name(), ".json"))
 		}
 	}
@@ -371,7 +372,8 @@ func listDecks() {
 }
 
 // createDeck creates a new vocabulary deck.
-func createDeck(reader *bufio.Reader) {
+func createDeck() {
+	reader := bufio.NewReader(os.Stdin)
 	clearScreen()
 	color.Cyan("You chose to create a new deck.")
 	fmt.Print("Enter the name of the new deck: ")
@@ -393,7 +395,7 @@ func createDeck(reader *bufio.Reader) {
 }
 
 // selectDeck selects an existing vocabulary deck.
-func selectDeck(reader *bufio.Reader) {
+func selectDeck() {
 	files, err := os.ReadDir("./decks")
 	if err != nil {
 		fmt.Println("Error reading decks:", err)
@@ -409,6 +411,7 @@ func selectDeck(reader *bufio.Reader) {
 		}
 	}
 
+	reader := bufio.NewReader(os.Stdin)
 	fmt.Print("Enter the number of the deck to select: ")
 	input, _ := reader.ReadString('\n')
 	input = strings.TrimSpace(input)
@@ -427,7 +430,7 @@ func selectDeck(reader *bufio.Reader) {
 }
 
 // renameDeck renames an existing vocabulary deck.
-func renameDeck(reader *bufio.Reader) {
+func renameDeck() {
 	files, err := os.ReadDir(decksDir)
 	if err != nil {
 		fmt.Println("Error reading decks:", err)
@@ -443,6 +446,7 @@ func renameDeck(reader *bufio.Reader) {
 		}
 	}
 
+	reader := bufio.NewReader(os.Stdin)
 	fmt.Print("Enter the number of the deck to rename: ")
 	input, _ := reader.ReadString('\n')
 	input = strings.TrimSpace(input)
@@ -482,7 +486,7 @@ func renameDeck(reader *bufio.Reader) {
 }
 
 // deleteDeck deletes an existing vocabulary deck.
-func deleteDeck(reader *bufio.Reader) {
+func deleteDeck() {
 	files, err := os.ReadDir(decksDir)
 	if err != nil {
 		fmt.Println("Error reading decks:", err)
@@ -498,6 +502,7 @@ func deleteDeck(reader *bufio.Reader) {
 		}
 	}
 
+	reader := bufio.NewReader(os.Stdin)
 	fmt.Print("Enter the number of the deck to delete: ")
 	input, _ := reader.ReadString('\n')
 	input = strings.TrimSpace(input)
