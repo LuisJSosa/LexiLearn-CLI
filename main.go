@@ -258,7 +258,7 @@ func calculateNextReview(confidence int) time.Time {
 
 // saveVocabList saves the vocabulary list to a JSON file
 func saveVocabList() {
-	file, err := os.Create(fileName)
+	file, err := os.Create(filepath.Join(decksDir, deckName+".json"))
 	if err != nil {
 		fmt.Println("Error saving vocabulary list:", err)
 		return
@@ -276,7 +276,7 @@ func saveVocabList() {
 
 // loadVocabList loads the vocabulary list from a JSON file
 func loadVocabList() {
-	file, err := os.Open(fileName)
+	file, err := os.Open(filepath.Join(decksDir, deckName+".json"))
 	if err != nil {
 		if os.IsNotExist(err) {
 			color.Yellow("\n\nNo previous vocabulary list found. Starting fresh!")
