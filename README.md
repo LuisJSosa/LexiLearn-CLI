@@ -23,6 +23,8 @@ LexiLearn is a command-line interface (CLI) application designed to help users m
 6. [Testing](#testing)
 7. [Contributing](#contributing)
 8. [License](#license)
+9. [Installation Instructions](#installation-instructions)
+
 
 ## Introduction
 
@@ -342,6 +344,10 @@ Please make sure your code adheres to the project's coding standards and passes 
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
-## Summary
+## Installation Instructions
 
-This user manual has provided you with the steps to install, run, and use LexiLearn. You can add, review, and manage vocabulary words and decks easily. Enjoy learning your vocabulary with LexiLearn!
+For detailed installation instructions on running LexiLearn in a Kubernetes environment, please refer to the [Running LexiLearn in Kubernetes](docs/running_app_in_kubernetes.md) guide.
+
+
+
+
