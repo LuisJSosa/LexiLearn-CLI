@@ -1,5 +1,5 @@
 # Use official Go image as the base
-FROM golang:1.22.4 as builder
+FROM golang:1.23.2 as builder
 
 # Set the author label
 LABEL authors="Luis Sosa"
